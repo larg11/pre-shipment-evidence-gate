@@ -1,0 +1,200 @@
+{
+  "packet_id": "PRE-SHIP-2026-USMCA-0914",
+  "sku_id": "SKU-SOLAR-INVERTER-X1",
+  "generated_at": "2026-10-18T08:30:00Z",
+  "slots": [
+    {
+      "slot_id": "slot_01_commercial_invoice",
+      "slot_name": "Commercial Invoice & Purchase Order",
+      "epistemic_state": "CORROBORATED",
+      "source_uri": "sftp://inbound/rfq/alibaba_po_90412.pdf",
+      "data": {
+        "po_number": "PO-90412",
+        "unit_value_usd": 420.00,
+        "declared_origin": "MX"
+      }
+    },
+    {
+      "slot_id": "slot_02_bill_of_lading_draft",
+      "slot_name": "Draft Ocean / Intermodal Waybill",
+      "epistemic_state": "CORROBORATED",
+      "source_uri": "sftp://inbound/logistics/draft_waybill_mxs_01.pdf",
+      "data": {
+        "carrier": "Intermodal Express",
+        "port_of_loading": "Veracruz, MX",
+        "port_of_discharge": "Houston, US"
+      }
+    },
+    {
+      "slot_id": "slot_03_packing_list",
+      "slot_name": "Export Packing List",
+      "epistemic_state": "CORROBORATED",
+      "source_uri": "sftp://inbound/logistics/packing_list_final.pdf",
+      "data": {
+        "gross_weight_kg": 18450,
+        "carton_count": 450,
+        "container_number": "MSKU-982145-0"
+      }
+    },
+    {
+      "slot_id": "slot_04_material_origin_declaration",
+      "slot_name": "Tier-1 Raw Material Origin Declaration",
+      "epistemic_state": "CORROBORATED",
+      "source_uri": "msg://whatsapp/supplier_audit_thread_684.json",
+      "data": {
+        "supplier_name": "Silicio del Norte S.A.",
+        "silicon_wafer_origin": "Monterrey, MX",
+        "smelter_certified": true
+      }
+    },
+    {
+      "slot_id": "slot_05_iso_17025_lab_report",
+      "slot_name": "ISO 17025 Metallurgical Lab Spectrometry",
+      "epistemic_state": "CORROBORATED",
+      "source_uri": "lab://iso17025/spectro_analysis_cert_4412.pdf",
+      "data": {
+        "lab_accreditation": "ISO/IEC 17025:2017 #L2291",
+        "purity_pct": 99.98,
+        "lead_content_ppm": 12
+      }
+    },
+    {
+      "slot_id": "slot_06_qima_aql_inspection",
+      "slot_name": "QIMA AQL 2.5 Pre-Shipment Inspection",
+      "epistemic_state": "CORROBORATED",
+      "source_uri": "qima://reports/psi_aql25_cert_88319.pdf",
+      "data": {
+        "standard": "ISO 2859-1 (AQL 2.5)",
+        "sample_size": 125,
+        "critical_defects": 0,
+        "result": "PASSED"
+      }
+    },
+    {
+      "slot_id": "slot_07_coo_declaration",
+      "slot_name": "Country of Origin Certification",
+      "epistemic_state": "CORROBORATED",
+      "source_uri": "docs://customs/coo_form_mx_2026.pdf",
+      "data": {
+        "certified_coo": "MX",
+        "certifier_role": "PRODUCER",
+        "treaty_code": "USMCA"
+      }
+    },
+    {
+      "slot_id": "slot_08_tier2_bom_manifest",
+      "slot_name": "Sub-tier Supplier Tier-2 BOM",
+      "epistemic_state": "CORROBORATED",
+      "source_uri": "sftp://catalog/bom/bom_subtier_inverter.csv",
+      "data": {
+        "tier2_suppliers_count": 8,
+        "non_originating_content_pct": 14.2
+      }
+    },
+    {
+      "slot_id": "slot_09_smelter_audit_report",
+      "slot_name": "Smelter / Refiner Responsible Minerals Audit",
+      "epistemic_state": "CORROBORATED",
+      "source_uri": "rmap://audit/smelter_conformant_list_2026.pdf",
+      "data": {
+        "smelter_id": "CID002814",
+        "rmap_status": "CONFORMANT"
+      }
+    },
+    {
+      "slot_id": "slot_10_hts_classification",
+      "slot_name": "HTS 10-Digit Tariff Determination",
+      "epistemic_state": "CORROBORATED",
+      "source_uri": "rules://hts/classification_wco_850440.json",
+      "data": {
+        "hts_code": "8504.40.9580",
+        "general_rate": "FREE",
+        "special_rate_usmca": "FREE"
+      }
+    },
+    {
+      "slot_id": "slot_11_rvc_calculation",
+      "slot_name": "Regional Value Content (RVC) Worksheet",
+      "epistemic_state": "CORROBORATED",
+      "source_uri": "calc://fta/rvc_net_cost_worksheet.xlsx",
+      "data": {
+        "calculation_method": "NET_COST",
+        "rvc_percentage": 72.4,
+        "threshold_required": 60.0,
+        "qualifies_usmca": true
+      }
+    },
+    {
+      "slot_id": "slot_12_direct_shipment_cert",
+      "slot_name": "Direct Shipment & Non-Manipulation Certificate",
+      "epistemic_state": "CORROBORATED",
+      "source_uri": "customs://logistics/direct_transit_guarantee.pdf",
+      "data": {
+        "transshipment_risk": false,
+        "bonded_transit": true
+      }
+    },
+    {
+      "slot_id": "slot_13_ilo_labor_audit",
+      "slot_name": "ILO Forced Labor Prevention Facility Audit",
+      "epistemic_state": "CORROBORATED",
+      "source_uri": "audit://social/smeta_sedex_audit_710.pdf",
+      "data": {
+        "uflpa_flag": false,
+        "smeta_pillar_score": 98.5
+      }
+    },
+    {
+      "slot_id": "slot_14_eccn_export_control",
+      "slot_name": "Dual-Use ECCN License Exemption Record",
+      "epistemic_state": "CORROBORATED",
+      "source_uri": "bis://screening/eccn_determination_3a001.json",
+      "data": {
+        "eccn": "EAR99",
+        "license_required": false
+      }
+    },
+    {
+      "slot_id": "slot_15_value_chain_manifest",
+      "slot_name": "Finished Goods Value Chain Link Map",
+      "epistemic_state": "CORROBORATED",
+      "source_uri": "graph://catalog/value_chains/graph_vc_1092.json",
+      "data": {
+        "root_tier": "TIER_3_MINE",
+        "nodes_mapped": 14,
+        "circular_dependencies": false
+      }
+    },
+    {
+      "slot_id": "slot_16_ad_cvd_scope_ruling",
+      "slot_name": "Anti-Dumping / Countervailing Scope Exclusion",
+      "epistemic_state": "CORROBORATED",
+      "source_uri": "doc://trade/ad_cvd_scope_determination_a570.pdf",
+      "data": {
+        "subject_to_adcvd": false,
+        "scope_exclusion_order": "EX-2025-098"
+      }
+    },
+    {
+      "slot_id": "slot_17_container_seal_record",
+      "slot_name": "ISO 17712 High-Security Container Seal Record",
+      "epistemic_state": "ASSERTED",
+      "source_uri": "depot://yard/container_seal_manifest_msku.json",
+      "data": {
+        "bolt_seal_number": "SEAL-USCBP-99812",
+        "seal_rating": "ISO 17712 H-CLASS",
+        "sealed": false
+      }
+    },
+    {
+      "slot_id": "slot_18_pre_shipment_auth",
+      "slot_name": "Pre-Shipment Release Authorization Gate",
+      "epistemic_state": "ASSERTED",
+      "source_uri": "workflow://release/final_gate_auth.json",
+      "data": {
+        "gate_status": "AWAITING_FINAL_HASH_ASSERTION",
+        "release_cleared": false
+      }
+    }
+  ]
+}

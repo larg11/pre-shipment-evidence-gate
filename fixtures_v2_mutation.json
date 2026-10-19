@@ -1,0 +1,19 @@
+{
+  "mutation_event": "RECURRING_SFTP_INGESTION_UPDATE",
+  "ingested_at": "2026-10-18T14:15:00Z",
+  "target_sku": "SKU-SOLAR-INVERTER-X1",
+  "mutated_slots": [
+    {
+      "slot_id": "slot_04_material_origin_declaration",
+      "slot_name": "Tier-1 Raw Material Origin Declaration",
+      "epistemic_state": "ASSERTED",
+      "source_uri": "sftp://catalog/batch_20261018_update/supplier_origin_rev2.csv",
+      "data": {
+        "supplier_name": "Xinjiang Polysilicon Core Ltd.",
+        "silicon_wafer_origin": "CN-XJ",
+        "smelter_certified": false,
+        "note": "Replaced original Mexican supplier Silicio del Norte S.A. due to Q4 inventory shortage."
+      }
+    }
+  ]
+}
